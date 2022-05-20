@@ -1,0 +1,116 @@
+:root {
+	--fz-big: 52px;
+	--fz-medium: 28px;
+	--fz-common: 20px;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background-color: rgb(20, 72, 141);
+	color: #fafafa;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	font-size: var(--fz-common);
+	line-height: 1;
+}
+
+.wrapper {
+}
+
+.weather {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-items: center;
+}
+
+.weather__wrapper {
+	display: grid;
+	gap: 10px 0;
+	width: 400px;
+	max-width: 100%;
+	background-color: rgb(78, 133, 204);
+	align-items: center;
+	align-content: center;
+	padding: 2rem;
+	border-radius: 20px;
+}
+
+.weather__header {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 10px;
+}
+
+.weather__city-info-wrapper {
+	display: grid;
+	gap: 5px;
+}
+
+.weather__city {
+	font-weight: bold;
+	font-size: var(--fz-big);
+}
+
+.weather__status {
+	font-size: var(--fz-medium);
+}
+
+.weather__icon-wrapper {
+	display: grid;
+	justify-items: end;
+}
+
+.weather__img {
+	object-fit: contain;
+}
+
+.weather__temp {
+	font-size: var(--fz-big);
+}
+
+.weather__feels-like {
+}
+
+.weather__loading-wrapper {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.weather__loading-img {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+}
+
+@media (max-width: 767px) {
+	:root {
+		--fz-big: 42px;
+		--fz-medium: 26px;
+		--fz-common: 18px;
+	}
+	.weather__wrapper {
+		padding: 1.5rem;
+	}
+}
+@media (max-width: 480px) {
+	:root {
+		--fz-big: 38px;
+		--fz-medium: 22px;
+		--fz-common: 16px;
+	}
+	.weather__wrapper {
+		width: unset;
+		max-width: 80%;
+	}
+}
